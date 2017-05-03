@@ -10,8 +10,6 @@
 
 规范旨在提高代码可读性，促进团队开发效率，减少维护成本以及自身编码能力的提升。
 
-墙裂推荐使用WebStrome+[eslint-plugin-react](https://github.com/gmfe/eslint-plugin-gm)开发，使用webStrome格式化代码，eslint检测代码，基本可以规范代码的编写了。
-
 ### 说明：
 
 ![suggest][Suggest Icon] 表示**建议**，不要求。
@@ -249,8 +247,6 @@ Link.contextTypes = {};
 ## 提交代码
 
 - 过eslint检测。
-- 格式化代码，WebStorm可设置commit的时候自动格式化代码。
-- gitlab PR原则。1 2个pass。2 半个钟后存在pass则过。3 如A提出修改意见，修改之后，需A的pass才能merge。4 特殊情况特殊处理(非工作时间找不到人review，紧急情况)，周知钉钉群后merge。
 - github PR原则。按照github的规则来，"pass"也需要2个。
 
 ## 美观
