@@ -1,8 +1,8 @@
-##es6编码规范
+## es6编码规范
 2016年8月2日 curry
 
 
-##1、类型
+## 1、类型
 
 * 1.1 基本类型: 直接存取基本类型。
     *  字符串
@@ -28,7 +28,7 @@
   bar[0] = 9;
   console.log(foo[0], bar[0]); // => 9, 9
 ```
-##2、引用
+## 2、引用
 * 2.1 对所有的引用使用 const ；不要使用 var。
 
  * 为什么？因为 let 是块级作用域，而 var 是函数作用域
@@ -70,7 +70,7 @@
 console.log(a); // ReferenceError
 console.log(b); // ReferenceError
 ```
-##3、对象
+## 3、对象
 * 3.1使用字面值创建对象。
 
 ```javascript
@@ -202,7 +202,7 @@ const atom = {
 ```
 
 
-##4、数组
+## 4、数组
 * 4.1 使用字面值创建数组。
 
 ```javascript
@@ -246,7 +246,7 @@ const foo = document.querySelectorAll('.foo');
 const nodes = Array.from(foo);
 
 ```
-##5、解构
+## 5、解构
 * 5.1 使用解构存取和使用多属性对象。
  * 为什么？因为解构能减少临时引用属性。
 
@@ -305,7 +305,7 @@ const [first, second] = arr;
   // 调用时只选择需要的数据
   const { left, right } = processInput(input);
 ```
-##6、字符串
+## 6、字符串
 * 6.1 字符串使用单引号 '' 。
 
 ```javascript
@@ -352,7 +352,7 @@ const errorMessage = 'This is a super long error that was thrown because ' +
     return `How are you, ${name}?`;
   }
 ```
-##7、函数
+## 7、函数
 * 7.1 使用函数声明代替函数表达式。
  * 为什么？模板字符串更为简洁，更具可读性。 
 
@@ -462,7 +462,7 @@ count();  // 2
 count(3); // 3
 count();  // 3
 ```
-##8、箭头函数
+## 8、箭头函数
 
 * 8.1 当你必须使用函数表达式（或传递一个匿名函数）时，使用箭头函数符号。
  *为什么?因为箭头函数创造了新的一个 this 执行环境（译注：参考 Arrow functions - JavaScript | MDN 和 ES6 arrow functions, syntax and lexical scoping），通常情况下都能满足你的需求，而且这样的写法更为简洁。
@@ -493,7 +493,7 @@ count();  // 3
     return total + n;
   }, 0);
 ```
-##9、构造函数
+## 9、构造函数
 * 9.1 总是使用 class。避免直接操作 prototype.
  *为什么? 因为 class 语法更为简洁更易读。
 
@@ -594,7 +594,7 @@ class Jedi {
   }
 }
 ```
-##10、模块
+## 10、模块
 * 10.1 总是使用模组 (import/export) 而不是其他非标准模块系统。你可以编译为你喜欢的模块系统。
  *为什么？模块就是未来，让我们开始迈向未来吧。。
 
@@ -634,7 +634,7 @@ class Jedi {
   // good
   import AirbnbStyleGuide from './AirbnbStyleGuide';
 ```
-##11、iterators&Generators
+## 11、iterators&Generators
 * 11.1 不要使用 iterators。使用高阶函数例如 map() 和 reduce() 替代 for-of。
  * 为什么？这加强了我们不变的规则。处理纯函数的回调值更易读，这比它带来的副作用更重要。
 
@@ -661,7 +661,7 @@ class Jedi {
 * 11.2 现在还不要使用 generators。
  * 为什么？因为它们现在还没法很好地编译到 ES5。 (译者注：目前(2016/03) Chrome 和 Node.js 的稳定版本都已支持 generators)
 
-##12、属性
+## 12、属性
 * 12.1 使用 . 来访问对象的属性。
 
 ```javascript
@@ -691,7 +691,7 @@ function getProp(prop) {
 const isJedi = getProp('jedi');
 ```
 
-##13、变量
+## 13、变量
 * 13.1 一直使用 const 来声明变量，如果不这样做就会产生全局变量。我们需要避免全局命名空间的污染。地球队长已经警告过我们了。（译注：全局，global 亦有全球的意思。地球队长的责任是保卫地球环境，所以他警告我们不要造成「全球」污染。）
 
 ```javascript
@@ -790,10 +790,10 @@ const dragonball = 'z';
   }
 ```
 
-##14、提升
+## 14、提升
 * 带编写
 
-##15、比较运算符
+## 15、比较运算符
 * 15.1 优先使用 === 和 !== 而不是 == 和 !=.
 * 15.2 条件表达式例如 if 语句通过抽象方法 ToBoolean 强制计算它们的表达式并且总是遵守下面的规则：
     *  对象 被计算为 true
@@ -832,7 +832,7 @@ if (collection.length) {
   // ...stuff...
 }
 ```
-##16、代码块
+## 16、代码块
 * 16.1 使用大括号包裹所有的多行代码块。
 
 ```javascript
@@ -876,7 +876,7 @@ if (test) {
   thing3();
 }
 ```
-##17、注释
+## 17、注释
 * 17.1 使用 /** ... */ 作为多行注释。包含描述、指定所有参数和返回值的类型和值。
 
 ```javascript
@@ -959,7 +959,7 @@ class Calculator {
   }
 }
 ```
-##18、空白
+## 18、空白
 * 18.1 使用 4 个空格作为缩进。
 
 ```javascript
@@ -1126,7 +1126,7 @@ const obj = {
 
 return obj;
 ```
-##19、逗号
+## 19、逗号
 *19.1 行首逗号：不需要。
 
 ```javascript
@@ -1201,7 +1201,7 @@ const hero = {
   ];
 ```
 
-##20、分号
+## 20、分号
 * 20.1 使用分号
 
 ```javascript
@@ -1223,7 +1223,7 @@ const hero = {
   return name;
 })();
 ```
-##21命名规则
+## 21命名规则
 *21.1 避免单字母命名。命名应具备描述性。
 
 ```javascript
